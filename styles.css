@@ -1,0 +1,106 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #666;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+.main-header {
+    margin-top: .5rem;
+    font-size: 2.75rem;
+}
+
+.results {
+  font-size: 1.25rem;
+  margin-top: 1rem;
+  padding: 1rem 0;
+}
+
+.form-input {
+    margin-top: 1rem;
+}
+
+.form-items {
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn.btn-submit {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.btn {
+  --background-hue: 0;
+  --background-saturation: 0%;
+  --initial-background-lightness: 90%;
+  --background-lightness: var(--initial-background-lightness);
+  --border-lightness: calc(var(--initial-background-lightness) - 20%);
+  
+  background-color: hsl(
+    var(--background-hue),
+    var(--background-saturation),
+    var(--background-lightness)
+  );
+  border: 1px solid hsl(
+    var(--background-hue),
+    var(--background-saturation),
+    var(--border-lightness)
+  );
+  outline: none;
+  cursor: pointer;
+  padding: .25em 1em;
+  border-radius: .3em;
+}
+
+.btn:hover, .btn:focus {
+  --background-lightness: calc(var(--initial-background-lightness) - 10%);
+  box-shadow: 0 0 5px 0 hsl(
+    var(--background-hue),
+    var(--background-saturation),
+    var(--border-lightness)
+  );
+}
+
+.input {
+  --input-hue: 0;
+  --input-saturation: 0%;
+  --initial-input-lightness: 100%;
+  --input-lightness: var(--initial-input-lightness);
+  --input-lightness: calc(var(--initial-input-lightness) - 20%);
+  
+  background-color: hsl(
+    var(--input-hue),
+    var(--input-saturation),
+    var(--input-lightness)
+  );
+  border: 1px solid hsl(
+    var(--input-hue),
+    var(--input-saturation),
+    var(--input-lightness)
+  );
+
+    border-radius: .3em;
+    outline: none;
+    padding: .5rem;
+    font-size: 1.25rem;
+}
+
+.input:focus {
+    --input-lightness: calc(var(--initial-input-lightness) - 10%);
+  
+    box-shadow: 0 0 5px 0 hsl(
+    var(--input-hue),
+    var(--input-saturation),
+    var(--input-lightness)
+  );
+}

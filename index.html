@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="./magic.js"></script>
+  <title>Website RCON</title>
+</head>
+
+<body>
+  <div class="main-header">
+    An interface for interacting with RCON
+  </div>
+
+  <div class="form-items">
+    <form>
+      <div class="form-input">
+        <label for="ip">Server IP:</label>
+        <input class="input" type="text" id="ip-field" name="ip">
+      </div>
+
+      <div class="form-input">
+        <label for="rconpass">Password:</label>
+        <input class="input" type="text" id="rcon-field" name="rconpass">
+      </div>
+
+      <div class="form-input">
+        <label for="command">Command:</label>
+        <input class="input" type="text" id="command-field" name="command">
+      </div>
+
+      <button class="btn btn-submit" type="submit" id="submit-button-post">Send!</button>
+    </form>
+  </div>
+  <div class="results" id="results"></div>
+</body>
+
+</html>
