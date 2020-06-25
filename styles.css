@@ -17,9 +17,16 @@ body {
 }
 
 .results {
-  font-size: 1.25rem;
-  margin-top: 1rem;
-  padding: 1rem 0;
+	font-size: 1.25rem;
+	margin-top: 1rem;
+	padding: 1rem 0;
+}
+
+.form-label {
+	float:left;
+	width: 5em;
+	text-align: right;
+	margin-right: 0.5em;
 }
 
 .form-input {
