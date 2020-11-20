@@ -7,7 +7,7 @@ const submitButton = document.getElementById("submit-button-post")
 submitButton.addEventListener('click', async ev => {
     ev.preventDefault()
 
-    const result = await fetch('https://payload.tf/api/rcon', {
+    const result = await fetch('https://payload.tf/api/external/rcon', {
         method: "POST",
         headers: {
             'Accept': 'application/json',
