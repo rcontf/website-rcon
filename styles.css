@@ -16,6 +16,17 @@ body {
     font-size: 2.75rem;
 }
 
+.warning {
+  font-size: 1.75rem;
+  margin: 0;
+  color: red;
+}
+
+.link {
+  color: #e3e3ff;
+  text-decoration: none;
+}
+
 .results {
 	font-size: 1.25rem;
 	margin-top: 1rem;
