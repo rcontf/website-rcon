@@ -9,8 +9,6 @@ const API_URL = "https://beta-api.rcon.tf/";
 
 submitButton.addEventListener("click", async ev => {
     ev.preventDefault();
-    
-    
 	try {
         const startTime = window.performance.now();
         console.log("%c[rcon.tf] %cSending request to %crcon.tf...", 'color: #fb8c00;', 'color: #fff;', 'color: #fb8c00;');
