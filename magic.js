@@ -10,21 +10,18 @@ const API_URL = "https://beta-api.rcon.tf/";
 submitButton.addEventListener("click", async ev => {
     ev.preventDefault();
 	try {
-        const startTime = window.performance.now();
-        console.log("%c[rcon.tf] %cSending request to %crcon.tf...", 'color: #fb8c00;', 'color: #fff;', 'color: #fb8c00;');
-        const { response, ...rest } = await sendRequest();
-        const endTime = window.performance.now();
-        console.log(`%c[rcon.tf] %cRecieved response from %crcon.tf %cin ${(endTime - startTime).toFixed(0)} ms`, 'color: #fb8c00;', 'color: #fff;', 'color: #fb8c00;', 'color: #fff;');
+        const body = await sendRequest();
 
-        if (cmdElement.value.includes("changelevel"))
+        if (cmdElement.value.includes("changelevel")) {
             return (resultElement.innerText = `Changed level to: ${cmdElement.value.slice(12)}`);
-            
+        }
+
 		if (!body) {
             console.log(`%c[rcon.tf] %cRecieved bad response from %crcon.tf%c:\nCode: ${rest.statusCode}\nMessage: ${rest.message}\nError: ${rest.error}`, 'color: #fb8c00;', 'color: #fff;', 'color: #fb8c00;', 'color: #fff;');
 			return (resultElement.innerText = `${rest.error}\n${rest.message}`);
 		}
 
-		return (resultElement.innerText = JSON.stringify(body)
+		return (resultElement.innerText = JSON.stringify(body.response)
 			.replace(/\\n/g, "\n")
 			.slice(1, -1)
 			.replace(/[\\\"]/g, "%QUOTE")
