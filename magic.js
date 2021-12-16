@@ -5,7 +5,7 @@ const cmdElement = document.getElementById("command-field");
 const resultElement = document.getElementById("results");
 const submitButton = document.getElementById("submit-button-post");
 
-const API_URL = "https://rcon.tf/api/execute";
+const API_URL = "https://beta-api.rcon.tf/";
 
 submitButton.addEventListener("click", async ev => {
     ev.preventDefault();
