@@ -17,8 +17,8 @@ submitButton.addEventListener("click", async ev => {
         }
 
 		if (!body) {
-            console.log(`%c[rcon.tf] %cRecieved bad response from %crcon.tf%c:\nCode: ${rest.statusCode}\nMessage: ${rest.message}\nError: ${rest.error}`, 'color: #fb8c00;', 'color: #fff;', 'color: #fb8c00;', 'color: #fff;');
-			return (resultElement.innerText = `${rest.error}\n${rest.message}`);
+            console.log(`%c[rcon.tf] %cRecieved bad response from %crcon.tf%c:\nCode: ${body.statusCode}\nMessage: ${body.message}\nError: ${body.error}`, 'color: #fb8c00;', 'color: #fff;', 'color: #fb8c00;', 'color: #fff;');
+			return (resultElement.innerText = `${body.error}\n${body.message}`);
 		}
 
 		return (resultElement.innerText = JSON.stringify(body.response)
